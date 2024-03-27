@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminPannelComponent } from './admin-pannel.component';
 import { AdminPannelRouting } from './admin-pannel.routing';
-import { AdminHeaderComponent } from './layout/admin-header/admin-header.component';
-import { AdminSidebarComponent } from './layout/admin-sidebar/admin-sidebar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    AdminPannelRouting
+    AdminPannelRouting,
+    FormsModule
   ],
-  declarations: [AdminPannelComponent, AdminHeaderComponent, AdminSidebarComponent]
+  declarations: [AdminPannelComponent]
 })
 export class AdminPannelModule { }

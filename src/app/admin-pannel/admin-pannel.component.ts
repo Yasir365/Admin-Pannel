@@ -11,5 +11,15 @@ export class AdminPannelComponent implements OnInit {
 
   ngOnInit() {
   }
+  isNavbarOpen: boolean = false;
+  activeLink: string = 'Dashboard';
+
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen;
+  }
+
+  setActiveLink(link: string) {
+    this.activeLink = link;
+  }
 
 }
