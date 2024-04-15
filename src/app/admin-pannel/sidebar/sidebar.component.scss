@@ -203,17 +203,8 @@
         }
 
         .toggle {
-            transform: translateY(-0%);
+            transform: translateY(0);
             right: -22px;
-        }
-
-        .home {
-            position: relative;
-            min-height: 100vh;
-            left: 77px;
-            width: calc(100% - 77px);
-            background-color: rgb(182, 97, 97) !important;
-            transition: var(--tran-03);
         }
 
     }
