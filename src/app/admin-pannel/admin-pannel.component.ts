@@ -6,20 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-pannel.component.css']
 })
 export class AdminPannelComponent implements OnInit {
-  toggle: any
-  searchBtn: any
-  modeSwitch: any
-  toggleSwitch: any
-  modeText: any
-
   darkMode = false;
+
+
   constructor() { }
 
   ngOnInit() {
-    this.toggle = document.querySelector('.toggle');
-    this.searchBtn = document.querySelector('.search-box');
-    this.modeSwitch = document.querySelector('.toggle-swich');
-    this.modeText = document.querySelector('.mode-text');
   }
 
   toggleDarkMode() {
