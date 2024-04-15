@@ -3,12 +3,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
   darkMode = false;
-  sidebar: any
-  home: any
+  sidebar: any;
+  home: any;
+  body: any;
   constructor() { }
 
   @HostListener("window:resize", ["$event"])
@@ -19,7 +20,15 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.sidebar = document.querySelector('.sidebar');
     this.home = document.querySelector('.home');
+    this.body = document.querySelector('body');
 
+    this.darkMode = localStorage.getItem('dark_mode') == 'true' ? true : false;
+
+    if (this.darkMode) {
+      this.body?.classList.add('dark');
+      localStorage.setItem('dark_mode', 'true');
+      this.darkMode = true;
+    }
 
     let windowWidth = window.innerWidth;
     if (windowWidth <= 768) {
@@ -41,13 +50,14 @@ export class SidebarComponent implements OnInit {
   }
 
   toggleDarkMode() {
-    let body = document.querySelector('body');
 
-    if (body?.classList.contains('dark')) {
-      body.classList.remove('dark');
+    if (this.body?.classList.contains('dark')) {
+      this.body.classList.remove('dark');
+      localStorage.setItem('dark_mode', 'false');
       this.darkMode = false;
     } else {
-      body?.classList.add('dark');
+      this.body?.classList.add('dark');
+      localStorage.setItem('dark_mode', 'true');
       this.darkMode = true;
     }
   }
