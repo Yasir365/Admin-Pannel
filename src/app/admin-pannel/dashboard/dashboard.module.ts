@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
+import { IgxDragDropModule, IgxDialogModule } from "igniteui-angular";
+
 
 const routes: Routes = [
   { path: '', component: DashboardComponent }
@@ -10,7 +12,9 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    IgxDragDropModule,
+    IgxDialogModule
   ],
   declarations: [DashboardComponent]
 })

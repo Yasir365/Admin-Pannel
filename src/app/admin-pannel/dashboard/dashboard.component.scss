@@ -6,3 +6,15 @@
     font-weight: 500;
     color: var(--text-color);
 }
+
+.cards {
+    padding: 16px;
+    border-radius: 8px;
+    color: var(--text-color);
+    margin: 1rem;
+}
+
+.drag_ghost_class {
+    transform: translate(0px, 0px) rotate(-3deg);
+    opacity: .8;
+}

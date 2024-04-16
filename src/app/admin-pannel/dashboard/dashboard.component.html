@@ -1,1 +1,23 @@
 <div class="text"> Dashboard </div>
+
+<div class="row" style="height: 100vh;">
+    <ng-container *ngFor="let item of card_items">
+        <div class="col-md-2" 
+            igxDrag
+            igxDrop
+            #dragRef
+            id="{{item.id}}" 
+            (dropped)="onIconDropped($event)" 
+            (dragStart)="dragStartHandler(item.id)"
+            (ghostCreate)="ghostCreateHandler(dragRef)"
+            (dragEnd)="dragEndHandler(dragRef)"
+            (enter)="onEnterHandler($event)"
+            [ghostClass]="'drag_ghost_class'">
+                <div class="cards" [ngStyle]="{'background-color': item.bg_color}"  draggable="false" onmousedown="if (event.preventDefault) event.preventDefault()">
+                    <h2>{{item.value}}</h2>
+                    <h5>{{item.name}}</h5>
+                </div>
+        </div>
+    </ng-container> 
+
+</div>
