@@ -10,6 +10,7 @@ export class SidebarComponent implements OnInit {
   sidebar: any;
   home: any;
   body: any;
+  sidebar_state: boolean = false;
   constructor() { }
 
   @HostListener("window:resize", ["$event"])
@@ -44,6 +45,7 @@ export class SidebarComponent implements OnInit {
         this.sidebar.classList.remove('close');
         this.home?.classList.remove('close');
         localStorage.setItem('sidebar_state', 'open');
+        this.sidebar_state = true;
       }
     }
 
@@ -65,11 +67,13 @@ export class SidebarComponent implements OnInit {
   toggleSidebar() {
     if (this.sidebar?.classList.contains('close')) {
       this.sidebar.classList.remove('close');
+      this.sidebar_state = true;
       this.home?.classList.remove('close');
       localStorage.setItem('sidebar_state', 'open');
     } else {
       this.sidebar?.classList.add('close');
       this.home?.classList.add('close');
+      this.sidebar_state = false;
       localStorage.setItem('sidebar_state', 'close');
     }
   }

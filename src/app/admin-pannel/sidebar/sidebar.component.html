@@ -11,7 +11,8 @@
           </div> 
       </div>
 
-      <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()"></i>
+      <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()" *ngIf="!sidebar_state"></i>
+      <i class='bx bx-chevron-left toggle' (click)="toggleSidebar()" *ngIf="sidebar_state"></i>
   </header>
 
   <div class="menu-bar">
@@ -22,13 +23,13 @@
           </li>
           <ul class="menu-links">
               <li class="nav-link">
-                  <a href="#">
+                  <a routerLink="dashboard">
                       <i class='bx bxs-dashboard icon'></i>
                       <span class="text nav-text">Dashboard</span>
                   </a>
               </li>
               <li class="nav-link">
-                  <a href="#">
+                  <a routerLink="analytics">
                       <i class='bx bxs-bar-chart-alt-2 icon'></i>
                       <span class="text nav-text">Analytics</span>
                   </a>
@@ -39,18 +40,7 @@
                       <span class="text nav-text">Users</span>
                   </a>
               </li>
-              <li class="nav-link">
-                  <a href="#">
-                      <i class="fa-solid fa-gauge icon"></i>
-                      <span class="text nav-text">Feedback</span>
-                  </a>
-              </li>
-              <li class="nav-link">
-                  <a href="#">
-                      <i class='bx bxs-bell-ring icon' ></i>
-                      <span class="text nav-text">Notifications</span>
-                  </a>
-              </li>
+             
           </ul>
       </div>
       
