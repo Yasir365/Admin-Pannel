@@ -12,6 +12,23 @@ ul {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+  }
+
 body {
     transition: var(--tran-02) !important;
 
@@ -41,5 +58,18 @@ body {
             background-color: var(--primary-color)  !important;
         }
 
+        header{
+            background-color: var(--primary-color);
+
+            .toggle{
+                color: var(--text-color) !important;
+            }
+
+            .moon-sun{
+                i{
+                    color: var(--text-color) !important;
+                }
+            }
+        }
     }
 }

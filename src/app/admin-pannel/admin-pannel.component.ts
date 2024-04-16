@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
     <app-sidebar></app-sidebar>
     
     <section class="home">
-      <router-outlet></router-outlet>
+      <app-header></app-header>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
     </section>
   </section>
   `,
@@ -24,9 +27,10 @@ import { Component, OnInit } from '@angular/core';
             left: 250px;
             width: calc(100% - 250px);
             transition: var(--tran-03);
-            padding: 1rem 2rem;
-    
-    
+            
+            .content{
+              padding: 1rem 2rem;
+            }
         }
     
         .home.close {

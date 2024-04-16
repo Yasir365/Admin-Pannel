@@ -1,0 +1,23 @@
+<header>
+  <div class="d-flex justify-content-between">
+      <i class="fa-solid fa-bars toggle" (click)="toggleSidebar()"></i>
+
+      <span class="right-side">
+        <!-- <div class="lang">
+          <select name="" id="">
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+          </select>
+        </div> -->
+        <div class="mode">
+              <div class="moon-sun">
+                  <i class='bx bxs-moon icon moon' *ngIf="darkMode"></i>
+                  <i class='bx bxs-sun icon sun' *ngIf="!darkMode"></i>
+              </div>
+              <div class="toggle-switch" (click)="toggleDarkMode()">
+                  <span class="switch"></span>
+              </div>
+        </div>
+      </span>
+  </div>
+</header>

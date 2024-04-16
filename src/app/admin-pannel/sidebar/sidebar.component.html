@@ -5,14 +5,14 @@
               <img src="../../assets/logo.webp" alt="">
           </span>
 
-          <div class="text header-text">
+          <div class="text header-text" *ngIf="sidebar_state">
               <span class="name">Coding</span>
               <span class="profession">Web Developer</span>
           </div> 
       </div>
 
-      <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()" *ngIf="!sidebar_state"></i>
-      <i class='bx bx-chevron-left toggle' (click)="toggleSidebar()" *ngIf="sidebar_state"></i>
+      <!-- <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()" *ngIf="!sidebar_state"></i>
+      <i class='bx bx-chevron-left toggle' (click)="toggleSidebar()" *ngIf="sidebar_state"></i> -->
   </header>
 
   <div class="menu-bar">
@@ -51,7 +51,7 @@
                   <span class="text nav-text">Logout</span>
               </a>
           </li>
-          <li class="mode">
+          <!-- <li class="mode">
               <div class="moon-sun">
                   <i class='bx bxs-moon icon moon' *ngIf="darkMode"></i>
                   <i class='bx bxs-sun icon sun' *ngIf="!darkMode"></i>
@@ -60,7 +60,7 @@
               <div class="toggle-switch" (click)="toggleDarkMode()">
                   <span class="switch"></span>
               </div>
-          </li>
+          </li> -->
 
       </div>
   </div>

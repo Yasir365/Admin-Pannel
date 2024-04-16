@@ -4,6 +4,7 @@ import { AdminPannelComponent } from './admin-pannel.component';
 import { AdminPannelRouting } from './admin-pannel.routing';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AdminPannelRouting,
     FormsModule
   ],
-  declarations: [AdminPannelComponent, SidebarComponent]
+  declarations: [AdminPannelComponent, SidebarComponent,HeaderComponent]
 })
 export class AdminPannelModule { }
