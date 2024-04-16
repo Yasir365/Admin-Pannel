@@ -31,7 +31,6 @@
                 <div id="chart" *ngIf="chartOptions1">
                     <apx-chart [series]="chartOptions1.series" [chart]="chartOptions1.chart" [xaxis]="chartOptions1.xaxis"></apx-chart>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -44,20 +43,19 @@
 </div>
 
 <div class="row">
-    <div class="col-md-5 chart-container">
+    <div class="col-md-7 chart-container">
         <div class="row">
             <div class="row">
-                <div id="chart" *ngIf="chartOptions3">
-                    <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart" [xaxis]="chartOptions3.xaxis"></apx-chart>
+                <div id="chart" *ngIf="chartOptions4">
+                    <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"></apx-chart>
                 </div>
-                
             </div>
         </div>
     </div>
     
-    <div class="col-md-7 chart-container">
-        <div id="chart" *ngIf="chartOptions4">
-            <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"></apx-chart>
+    <div class="col-md-5 chart-container">
+        <div id="chart" *ngIf="chartOptions3">
+            <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart" [xaxis]="chartOptions3.xaxis"></apx-chart>
         </div>
     </div>
 </div>
