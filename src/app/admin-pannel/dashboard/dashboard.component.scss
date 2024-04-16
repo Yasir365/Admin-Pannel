@@ -11,12 +11,19 @@
     padding: 16px;
     border-radius: 8px;
     color: var(--text-color);
-    margin: 1rem;
     cursor: pointer;
     height: 150px;
+    width: 100%;
 }
 
 .drag_ghost_class {
     transform: rotate(-3deg);
     opacity: .8;
+}
+
+.chart-container{
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 8px;
+
 }

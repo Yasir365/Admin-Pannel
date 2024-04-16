@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IgxDragDropModule, IgxDialogModule } from "igniteui-angular";
+import { NgApexchartsModule } from "ng-apexcharts";
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     IgxDragDropModule,
-    IgxDialogModule
+    IgxDialogModule,
+    NgApexchartsModule
   ],
   declarations: [DashboardComponent]
 })
