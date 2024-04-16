@@ -1,6 +1,6 @@
 
 <div class="row mb-4">
-    <div class="col-12 text"> Dashboard </div>
+    <div class="text"> Dashboard </div>
 </div>
 <div class="row mb-4">
     <ng-container *ngFor="let item of card_items">
@@ -24,7 +24,7 @@
 
 </div>
 
-<div class="row mb-4">
+<div class="row">
     <div class="col-md-7 chart-container">
         <div class="row">
             <div class="row">
@@ -39,6 +39,25 @@
     <div class="col-md-5 chart-container">
         <div id="chart" *ngIf="chartOptions2">
             <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [xaxis]="chartOptions2.xaxis"></apx-chart>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5 chart-container">
+        <div class="row">
+            <div class="row">
+                <div id="chart" *ngIf="chartOptions3">
+                    <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart" [xaxis]="chartOptions3.xaxis"></apx-chart>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-7 chart-container">
+        <div id="chart" *ngIf="chartOptions4">
+            <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"></apx-chart>
         </div>
     </div>
 </div>
