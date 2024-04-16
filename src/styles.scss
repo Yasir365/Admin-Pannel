@@ -1,14 +1,20 @@
 // Google Font Poppins
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 @import url('/src/assets/variables.scss');
+@import "bootstrap/scss/bootstrap";
+
 
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --bs-gutter-x: 0 !important;
 }
 
+ul {
+    padding: 0;
+}
 
 body {
     transition: var(--tran-02) !important;
