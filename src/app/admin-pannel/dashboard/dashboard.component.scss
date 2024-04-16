@@ -12,9 +12,10 @@
     border-radius: 8px;
     color: var(--text-color);
     margin: 1rem;
+    cursor: pointer;
 }
 
 .drag_ghost_class {
-    transform: translate(0px, 0px) rotate(-3deg);
+    transform: rotate(-3deg);
     opacity: .8;
 }
