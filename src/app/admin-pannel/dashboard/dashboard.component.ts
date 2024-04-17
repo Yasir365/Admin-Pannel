@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
       series: [
         {
           name: "Total users",
-          data: [4,5,3,4,5,6,5,3,5,4,4,2]
+          data: [4, 5, 3, 4, 5, 6, 5, 3, 5, 4, 4, 2]
         },
         {
           name: "Acive users",
@@ -51,9 +51,9 @@ export class DashboardComponent implements OnInit {
         zoom: {
           enabled: false
         },
-        background: '#fff',
+        background: '#DDDDDD',
         borderRadius: 50
-        
+
       },
       dataLabels: {
         enabled: false
@@ -66,7 +66,7 @@ export class DashboardComponent implements OnInit {
         align: "left"
       },
       xaxis: {
-        categories: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
       }
     };
 
@@ -75,28 +75,28 @@ export class DashboardComponent implements OnInit {
       chart: {
         height: 430,
         type: "radialBar",
-        background: '#fff',
-        showlabel:true
+        background: '#DDDDDD',
+        showlabel: true
       },
       // plotOptions: {
       //   radialBar: {
-          // dataLabels: {
-          //   name: {
-          //     fontSize: "50px",
-          //     color: "#000"
-          //   },
-          //   value: {
-          //     fontSize: "16px"
-          //   },
-          //   total: {
-          //     show: true,
-          //     label: "Total",
-          //     formatter: function(w:any) {
-          //       return "249";
-          //     }
-          //   }
-          // }
-        // }
+      // dataLabels: {
+      //   name: {
+      //     fontSize: "50px",
+      //     color: "#000"
+      //   },
+      //   value: {
+      //     fontSize: "16px"
+      //   },
+      //   total: {
+      //     show: true,
+      //     label: "Total",
+      //     formatter: function(w:any) {
+      //       return "249";
+      //     }
+      //   }
+      // }
+      // }
       // },
       labels: ["Total Orders", "Completed Users", "Pending Orders"],
     };
@@ -111,7 +111,7 @@ export class DashboardComponent implements OnInit {
       chart: {
         height: 410,
         type: "radar",
-        background: '#fff',
+        background: '#DDDDDD',
       },
       dataLabels: {
         enabled: true
@@ -139,7 +139,7 @@ export class DashboardComponent implements OnInit {
       },
       tooltip: {
         y: {
-          formatter: function(val:any) {
+          formatter: function (val: any) {
             return val;
           }
         }
@@ -158,7 +158,7 @@ export class DashboardComponent implements OnInit {
       yaxis: {
         tickAmount: 7,
         labels: {
-          formatter: function(val:any, i:any) {
+          formatter: function (val: any, i: any) {
             if (i % 2 === 0) {
               return val;
             } else {
@@ -179,7 +179,7 @@ export class DashboardComponent implements OnInit {
       chart: {
         height: 410,
         type: "bar",
-        background: '#fff',
+        background: '#DDDDDD',
       },
       plotOptions: {
         bar: {
@@ -190,7 +190,7 @@ export class DashboardComponent implements OnInit {
       },
       dataLabels: {
         enabled: true,
-        formatter: function(val:any) {
+        formatter: function (val: any) {
           return val + "%";
         },
         offsetY: -20,
@@ -201,7 +201,7 @@ export class DashboardComponent implements OnInit {
       },
 
       xaxis: {
-        categories: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         position: "top",
         labels: {
           offsetY: -18
@@ -251,7 +251,7 @@ export class DashboardComponent implements OnInit {
         },
         labels: {
           show: false,
-          formatter: function(val:any) {
+          formatter: function (val: any) {
             return val + "%";
           }
         }

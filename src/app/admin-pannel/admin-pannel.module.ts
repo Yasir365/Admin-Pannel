@@ -12,6 +12,6 @@ import { HeaderComponent } from './header/header.component';
     AdminPannelRouting,
     FormsModule
   ],
-  declarations: [AdminPannelComponent, SidebarComponent,HeaderComponent]
+  declarations: [AdminPannelComponent, SidebarComponent, HeaderComponent]
 })
 export class AdminPannelModule { }
