@@ -760,12 +760,12 @@ export class DashboardComponent implements OnInit {
 
   }
   public card_items = [
-    { id: 0, name: "Total Users", value: 45, bg_color: "#FFC107" },
-    { id: 1, name: "Active Users", value: 30, bg_color: "#0DCAF0" },
-    { id: 2, name: "Blocked Users", value: 15, bg_color: "#F8F9FA" },
-    { id: 3, name: "Total Orders", value: 105, bg_color: "#F7BAC5" },
-    { id: 4, name: "Completed Orders", value: 67, bg_color: "#D2AA84" },
-    { id: 5, name: "Pending Orders", value: 38, bg_color: "#11C15B" },
+    { id: 0, name: "Total Users", value: 45, bg_color: "#DE73FF" },
+    { id: 1, name: "Active Users", value: 30, bg_color: "#24E5A3" },
+    { id: 2, name: "Blocked Users", value: 15, bg_color: "#FCB939" },
+    { id: 3, name: "Total Orders", value: 105, bg_color: "#DE73FF" },
+    { id: 4, name: "Completed Orders", value: 67, bg_color: "#24E5A3" },
+    { id: 5, name: "Pending Orders", value: 38, bg_color: "#FCB939" },
   ];
 
   public onIconDropped(ev: any) {

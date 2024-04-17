@@ -14,24 +14,19 @@ ul {
 
 ::-webkit-scrollbar {
     width: 8px;
-    /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
-    /* Color of the track */
 }
 
 ::-webkit-scrollbar-thumb {
     background: #888;
-    /* Color of the thumb */
     border-radius: 5px;
-    /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-    /* Color of the thumb on hover */
 }
 
 body {
@@ -59,12 +54,12 @@ body {
 
         }
 
-        .cards {
+        .dashboard-tiles {
             background-color: var(--primary-color) !important;
         }
 
         header {
-            background-color: var(--primary-color);
+            background-color: var(--primary-color) !important;
 
             .toggle {
                 color: var(--text-color) !important;
