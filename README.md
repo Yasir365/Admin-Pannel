@@ -7,6 +7,7 @@ npm i @types/aos
 <!-- bootstrap -->
 npm i bootstrap
 "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 
 
 <!-- Box Icons -->
