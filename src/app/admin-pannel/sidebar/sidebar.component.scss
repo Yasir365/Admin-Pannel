@@ -84,7 +84,8 @@
             align-items: center;
             transition: var(--tran-04);
 
-            &:hover {
+            &:hover,
+            &.active {
                 background: var(--primary-color);
                 border-radius: 8px;
 
