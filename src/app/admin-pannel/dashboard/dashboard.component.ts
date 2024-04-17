@@ -1,3 +1,4 @@
+import { AdminPannelService } from './../admin-pannel.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   ChartComponent,
@@ -29,7 +30,7 @@ export class DashboardComponent implements OnInit {
   chartOptions3: any;
   chartOptions4: any;
 
-  constructor() {
+  constructor(private adminPannelService: AdminPannelService) {
     this.chartOptions1 = {
       series: [
         {

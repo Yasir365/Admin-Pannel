@@ -1,3 +1,4 @@
+import { AdminPannelService } from './../admin-pannel.service';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   home: any;
   body: any;
   sidebar_state: boolean = false;
-  constructor() { }
+  constructor(private adminPannelService: AdminPannelService) { }
 
 
   @HostListener("window:resize", ["$event"])
@@ -30,6 +31,7 @@ export class HeaderComponent implements OnInit {
       this.body?.classList.add('dark');
       localStorage.setItem('dark_mode', 'true');
       this.darkMode = true;
+      this.adminPannelService.setDarkModeData(this.darkMode);
     }
 
     let windowWidth = window.innerWidth;
@@ -63,6 +65,8 @@ export class HeaderComponent implements OnInit {
       localStorage.setItem('dark_mode', 'true');
       this.darkMode = true;
     }
+    this.adminPannelService.setDarkModeData(this.darkMode);
+
   }
 
   toggleSidebar() {
