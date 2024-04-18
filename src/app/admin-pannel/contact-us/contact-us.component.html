@@ -1,14 +1,31 @@
 <div class="Breadcrumb">Contact Us</div>
 
-<div class="row wrapper">
+<div class="row wrapper mt-4">
   <div class="col-md-6 content">
-      <label>Enter Name</label>
-      <input type="text" class="form-control">
-     
-      <label>Enter Email</label>
-      <input type="email" class="form-control">
-     
-      <label>Enter Message</label>
-      <textarea type="text" class="form-control" rows="7"> </textarea>
+    <form #f="ngForm" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+      <label>Enter Name <span class="error">*</span></label>
+      <input type="text" class="form-control" formControlName="name" [ngClass]="{ 'form-submitted': f.submitted }" >
+      <div *ngIf="validator.checkErrors(g['name'], f)" class="error">
+        <p *ngIf="g['name'].errors?.['required']">Name is required.</p>
+      </div>
+      
+      <label>Enter Email <span class="error">*</span></label>
+      <input type="email" class="form-control" formControlName="email">
+      <div *ngIf="validator.checkErrors(g['email'], f)" class="error">
+        <p *ngIf="g['email'].errors?.['required']">Email is required.</p>
+        <p *ngIf="g['email'].errors?.['email']">Email is invalid.</p>
+      </div>
+      
+      <label>Enter Message <span class="error">*</span></label>
+      <textarea type="text" class="form-control" rows="7" formControlName="message"> </textarea>
+      <div *ngIf="validator.checkErrors(g['message'], f)" class="error">
+        <p *ngIf="g['message'].errors?.['required']">Message is required.</p>
+        <p *ngIf="g['message'].errors?.['minlength']">Message is too short.</p>
+      </div>
+
+      <div class="button">
+          <button class="btn" type="submit" [disabled]="!contactForm.valid">Submit</button>
+      </div>
+    </form>
   </div>
 </div>

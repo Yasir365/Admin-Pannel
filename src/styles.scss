@@ -33,6 +33,9 @@ ul {
     font-size: 25px;
     font-weight: 500;
     color: var(--text-color);
+    display: inline-block;
+    border-bottom: 1px solid var(--text-color);
+    cursor: pointer;
 }
 
 body {
