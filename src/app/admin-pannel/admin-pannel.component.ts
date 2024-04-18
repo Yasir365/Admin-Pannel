@@ -25,8 +25,8 @@ import { ToastrService } from 'ngx-toastr';
         .home {
             position: relative;
             min-height: 100vh;
-            left: 250px;
-            width: calc(100% - 250px);
+            left: 260px;
+            width: calc(100% - 260px);
             transition: var(--tran-03);
             
             .content{
@@ -35,7 +35,7 @@ import { ToastrService } from 'ngx-toastr';
         }
     
         .home.close {
-            left: 78px !important;
+            left: 60px !important;
             width: calc(100% - 78px) !important;
         }
     }
