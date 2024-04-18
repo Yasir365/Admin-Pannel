@@ -29,6 +29,12 @@ ul {
     background: #555;
 }
 
+.Breadcrumb {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
 body {
     transition: var(--tran-02) !important;
 

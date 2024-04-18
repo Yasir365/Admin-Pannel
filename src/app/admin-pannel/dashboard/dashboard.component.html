@@ -1,8 +1,8 @@
 
-<div class="row mb-4">
-    <div class="text"> Dashboard </div>
-</div>
-<div class="row mb-4">
+<div class="Breadcrumb"> Dashboard </div>
+
+<!-- Tiles Stats -->
+<div class="row mt-4">
     <ng-container *ngFor="let item of card_items; let i = index">
         <div class="col-md-2" 
             igxDrag
@@ -24,18 +24,20 @@
 
 </div>
 
-<div class="row">
+
+<!-- Graphs -->
+<div class="row mt-4">
     <div class="col-md-7 chart-container" >
         <div class="row">
             <div class="row">
-                <div id="chart" *ngIf="chartOptions1" data-aos="zoom-in-up">
+                <div id="chart" *ngIf="chartOptions1" >
                     <apx-chart [series]="chartOptions1.series" [chart]="chartOptions1.chart" [xaxis]="chartOptions1.xaxis"></apx-chart>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="col-md-5 chart-container" data-aos="zoom-in-up">
+    <div class="col-md-5 chart-container" >
         <div id="chart" *ngIf="chartOptions2">
             <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [xaxis]="chartOptions2.xaxis"></apx-chart>
         </div>

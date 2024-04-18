@@ -1,8 +1,35 @@
 @import url('/src/assets/variables.scss');
 
-
-.text {
-    font-size: 25px;
-    font-weight: 500;
+* {
     color: var(--text-color);
+}
+
+
+.filters {
+    input {
+        border: none;
+        outline: none;
+    }
+
+    button {
+        background: var(--primary-color);
+        color: var(--toggle-color);
+    }
+}
+
+.table {
+
+    thead,
+    th {
+        padding: 1rem 8px;
+        background: var(--primary-color-light);
+        color: var(--text-color);
+    }
+
+    tr,
+    td {
+        padding: 1rem;
+        background: var(--sidebar-color);
+        color: var(--text-color);
+    }
 }

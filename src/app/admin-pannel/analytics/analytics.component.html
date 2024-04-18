@@ -1,1 +1,64 @@
-<div class="text"> Analytics </div>
+<div class="Breadcrumb"> Analytics </div>
+
+<!-- Filters -->
+<div class="row mt-4 filters">
+    <div class="col">
+        <label>Min Visitors:</label>
+        <input type="number" class="form-control" [(ngModel)]="filter.minVisitors" (input)="changeFilter()" placeholder="Enter Min Visitors">
+        
+    </div>
+    <div class="col">
+        <label>Max Visitors:</label>
+        <input type="number" class="form-control" [(ngModel)]="filter.maxVisitors" (input)="changeFilter()" placeholder="Enter Max Visitors">
+    </div>
+    
+    <div class="col">
+        <label>Min Conversion Rate:</label>
+        <input type="number" class="form-control" [(ngModel)]="filter.minConversionRate" (input)="changeFilter()" placeholder="Enter Min Conversion">
+    </div>
+    
+    <div class="col">
+        <label>Max Conversion Rate:</label>
+        <input type="number" class="form-control" [(ngModel)]="filter.maxConversionRate" (input)="changeFilter()" placeholder="Enter Min Conversion">
+    </div>
+    
+    <div class="col">
+        <button class="btn form-control mt-4" [disabled]="btnDisable">search</button>
+    </div>
+</div>
+
+<!-- Table Data -->
+<div class="row mt-4">
+    <div class="col-12">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Visitors</th>
+                <th scope="col">Page Views</th>
+                <th scope="col">Bounce Rate</th>
+                <th scope="col">Session Duration</th>
+                <th scope="col">Conversion Rate</th>
+                <th scope="col">Revenue</th>
+                <th scope="col">New Users</th>
+                <th scope="col">Returning Users</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of analyticsData; let i = index">
+                    <td>{{ i }}</td>
+                    <td>{{ data.date }}</td>
+                    <td>{{ data.visitors }}</td>
+                    <td>{{ data.pageViews }}</td>
+                    <td>{{ data.bounceRate }}%</td>
+                    <td>{{ data.sessionDuration }}</td>
+                    <td>{{ data.conversionRate }}%</td>
+                    <td>{{ data.revenue }}</td>
+                    <td>{{ data.newUsers }}</td>
+                    <td>{{ data.returningUsers }}</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

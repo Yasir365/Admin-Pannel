@@ -139,61 +139,6 @@
         }
     }
 
-    .bottom-content {
-
-        .mode {
-            background: var(--primary-color-light);
-            position: relative;
-            border-radius: 6px;
-
-            .moon-sun {
-                // height: 50px;
-                // width: 60px;
-                display: flex;
-                align-items: center;
-
-                i {
-                    position: absolute;
-                }
-            }
-
-
-            .toggle-switch {
-                height: 100%;
-                min-width: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                right: 0;
-                border-radius: 6px;
-
-                .switch {
-                    height: 22px;
-                    width: 44px;
-                    border-radius: 25px;
-                    background: var(--toggle-color);
-                    position: relative;
-                    cursor: pointer;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        border-radius: 50%;
-                        top: 50%;
-                        left: 5px;
-                        transform: translateY(-50%);
-                        height: 15px;
-                        width: 15px;
-                        background: var(--sidebar-color);
-                        transition: var(--tran-03);
-                    }
-                }
-            }
-
-        }
-    }
-
 
     &.close {
         width: 78px;

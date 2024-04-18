@@ -32,6 +32,9 @@ export class DashboardComponent implements OnInit {
   chartOptions4: any;
 
   constructor(private adminPannelService: AdminPannelService) {
+  }
+
+  ngOnInit() {
     this.card_items = [
       { id: 0, name: "Total Users", value: 45, bg_color: "#DE73FF" },
       { id: 1, name: "Active Users", value: 30, bg_color: "#24E5A3" },
@@ -40,9 +43,8 @@ export class DashboardComponent implements OnInit {
       { id: 4, name: "Completed Orders", value: 67, bg_color: "#24E5A3" },
       { id: 5, name: "Pending Orders", value: 38, bg_color: "#FCB939" },
     ];
-  }
 
-  ngOnInit() {
+
     this.adminPannelService.getDarkModeData().subscribe((data: any) => {
       if (data) {
 
