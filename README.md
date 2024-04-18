@@ -13,3 +13,8 @@ npm i bootstrap
 <!-- Box Icons -->
 npm i boxicons
 "node_modules/boxicons/css/boxicons.min.css"
+
+
+<!-- ngx Toaster -->
+npm i ngx-toastr
+"node_modules/ngx-toastr/toastr.css"

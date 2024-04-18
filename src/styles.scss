@@ -54,10 +54,69 @@ ul {
     }
 }
 
+.toast-container .ngx-toastr {
+    top: 50px;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    border-radius: 10px;
+
+    span {
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+}
+
+.toast-success {
+    border-left: 5px solid green;
+
+    .toast-progress {
+        background: green;
+    }
+}
+
+.toast-error {
+    border-left: 5px solid red;
+
+    .toast-progress {
+        background: red;
+    }
+}
+
+.toast-warning {
+    border-left: 5px solid rgb(255, 196, 0);
+
+    .toast-progress {
+        background: rgb(221, 206, 2);
+    }
+}
+
 body {
     transition: var(--tran-02) !important;
 
     &.dark {
+        .toast-success {
+            border-left: 5px solid #3A3B3C;
+
+            .toast-progress {
+                background: #3A3B3C;
+            }
+        }
+
+        .toast-error {
+            border-left: 5px solid #3A3B3C;
+
+            .toast-progress {
+                background: #3A3B3C;
+            }
+        }
+
+        .toast-warning {
+            border-left: 5px solid #3A3B3C;
+
+            .toast-progress {
+                background: #3A3B3C;
+            }
+        }
 
         .sidebar li a:hover .icon,
         .sidebar li a:hover .text {
