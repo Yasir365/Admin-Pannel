@@ -18,3 +18,7 @@ npm i boxicons
 <!-- ngx Toaster -->
 npm i ngx-toastr
 "node_modules/ngx-toastr/toastr.css"
+
+
+<!-- Drag Drop -->
+ng add igniteui-angular
