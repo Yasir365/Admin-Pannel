@@ -39,40 +39,7 @@
 
     }
 
-    li {
-        height: 50px;
-        margin-top: 10px;
-        list-style: none;
-        display: flex;
-        align-items: center;
-
-        .text,
-        .icon {
-            color: var(--text-color);
-            transition: var(--tran-02);
-        }
-
-        a {
-            text-decoration: none;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            transition: var(--tran-04);
-
-            &:hover,
-            &.active {
-                background: var(--primary-color);
-                border-radius: 8px;
-
-                .icon,
-                .text {
-                    color: var(--sidebar-color);
-                }
-            }
-        }
-    }
-
+    
     .text {
         font-size: 16px;
         font-weight: 500;
@@ -83,33 +50,68 @@
 
     }
 
-    .icon {
-        font-size: 20px;
-        min-width: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     .menu-bar {
         height: calc(100% - 55px);
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-
+        
         .menu-items {
+            li {
+                height: 50px;
+                margin-top: 10px;
+                list-style: none;
+                display: flex;
+                align-items: center;
 
-            .search-box {
-                background: var(--primary-color-light);
-                border-radius: 6px;
-
-                input {
+                &.search-box {
+                    background: var(--primary-color-light);
+                    border-radius: 6px;
+    
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        border-radius: 6px;
+                        background: var(--primary-color-light);
+                    }
+                }
+        
+                .text,
+                .icon {
+                    color: var(--text-color);
+                    transition: var(--tran-02);
+                }
+        
+                .icon {
+                    font-size: 20px;
+                    min-width: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+                a {
+                    text-decoration: none;
                     height: 100%;
                     width: 100%;
-                    outline: none;
-                    border: none;
-                    border-radius: 6px;
-                    background: var(--primary-color-light);
+                    display: flex;
+                    align-items: center;
+                    transition: var(--tran-04);
+        
+                    &:hover,
+                    &.active {
+                        background: var(--primary-color);
+                        border-radius: 8px;
+        
+                        .icon,
+                        .text {
+                            color: var(--sidebar-color);
+                        }
+                    }
                 }
             }
         }
