@@ -9,6 +9,8 @@ import { formValidation } from '../helper/form-validation';
 })
 export class ContactUsComponent implements OnInit {
   contactForm!: FormGroup;
+  loading: boolean = false;
+
   constructor(public validator: formValidation, private fb: FormBuilder) {
     this.contactForm = this.fb.group({
       name: new FormControl(null, [Validators.required]),
@@ -25,6 +27,12 @@ export class ContactUsComponent implements OnInit {
   }
 
   onSubmit(form: FormGroup) {
+    this.loading = true;
+    setTimeout(() => {
+      this.contactForm.reset();
+      this.loading = false;
+
+    }, 1500);
   }
 
 }

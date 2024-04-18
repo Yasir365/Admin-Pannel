@@ -24,7 +24,11 @@
       </div>
 
       <div class="button">
-          <button class="btn" type="submit" [disabled]="!contactForm.valid">Submit</button>
+          <button class="btn" type="submit" [disabled]="!contactForm.valid || loading">
+            <i class='bx bx-send' style="margin-top: 2px; margin-right: 2px; transform: rotate(-25deg);"></i>
+            Submit 
+            <div class="loader" *ngIf="loading"></div> 
+          </button>
       </div>
     </form>
   </div>
