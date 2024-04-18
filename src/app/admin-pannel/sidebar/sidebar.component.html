@@ -1,61 +1,79 @@
 <nav class="sidebar">
-    <div class="image-text">
-        <span class="image">
-            <img src="../../assets/logo.png" alt="">
-        </span>
-
-        <div class="text ">
-            <span class="profession">Web Developer</span>
-        </div> 
+    <div class="logo-details" routerLink="/">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo-name min">Coding</span>
     </div>
 
-  <div class="menu-bar">
-    <div class="menu-items">
-        <li class="search-box nav-items">
-            <i class='bx bx-search-alt-2 icon' ></i>
-            <input type="text" placeholder="Search...">
+    <!-- <li class="search-box menu-link">
+        <i class='bx bx-search-alt-2 icon' ></i>
+        <input type="text" placeholder="Search...">
+    </li> -->
+
+
+    <ul class="menu-links">
+        <li>
+            <a routerLink="dashboard" routerLinkActive="active">
+                <i class='bx bxs-dashboard icon'></i>
+                <span class="nav-text min">Dashboard</span>
+            </a>
         </li>
-        <ul>
-            <li>
-                <a routerLink="dashboard" routerLinkActive="active">
-                    <i class='bx bxs-dashboard icon'></i>
-                    <span class="text nav-text">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a routerLink="analytics" routerLinkActive="active">
-                    <i class='bx bxs-bar-chart-alt-2 icon'></i>
-                    <span class="text nav-text">Analytics</span>
-                </a>
-            </li>
-            <li>
-                <a routerLink="/">
+
+        <li>
+            <a routerLink="analytics" routerLinkActive="active">
+                <i class='bx bxs-bar-chart-alt-2 icon'></i>
+                <span class="nav-text min">Analytics</span>
+            </a>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a>
                     <i class='bx bx-user icon'></i>
-                    <span class="text nav-text">Users</span>
+                    <span class="nav-text min">Users</span>
                 </a>
-            </li>
-            <li>
-                <a routerLink="change-password" routerLinkActive="active">
-                <i class="fa-solid fa-address-book icon"></i>
-                <span class="text nav-text">Contact Us</span>
+                <i class='bx bx-chevron-down arrow min'></i>
+            </div>
+            <ul class="sub-menu">
+                <li> <a routerLink="users/active-users" routerLinkActive="active">Active Users</a></li>
+                <li> <a routerLink="users/blocked-users" routerLinkActive="active">Blocked Users</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a>
+                    <i class='bx bx-shopping-bag icon'></i>
+                    <span class="nav-text min">Orders</span>
                 </a>
-            </li>
-            <li>
-                <a routerLink="404" routerLinkActive="active">
-                    <i class='bx bx-error-circle icon'></i>
-                    <span class="text nav-text">404 Page</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
+                <i class='bx bx-chevron-down arrow min'></i>
+            </div>
+            <ul class="sub-menu">
+                <li> <a routerLink="orders/complete-orders" routerLinkActive="active">Complete Orders</a></li>
+                <li> <a routerLink="orders/pending-orders" routerLinkActive="active">Pendings Orders</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a routerLink="change-password" routerLinkActive="active">
+            <i class="fa-solid fa-address-book icon"></i>
+            <span class="nav-text min">Contact Us</span>
+            </a>
+        </li>
+        
+        <li>
+            <a routerLink="404" routerLinkActive="active">
+                <i class='bx bx-error-circle icon'></i>
+                <span class="nav-text min">404 Page</span>
+            </a>
+        </li>
+        
+    </ul>
       
-    <li>
+    <!-- <li>
         <a href="#">
             <i class='bx bxs-exit icon' ></i>
             <span class="text nav-text">Logout</span>
         </a>
-    </li>
-  </div>
+    </li> -->
 
 </nav>
