@@ -11,7 +11,7 @@ const routes: Routes = [
       { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
       { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
       { path: 'analytics', loadChildren: () => import('./analytics/analytics.module').then(m => m.AnalyticsModule) },
-      { path: 'change-password', loadChildren: () => import('./change-password/change-password.module').then(m => m.ChangePasswordModule) },
+      { path: 'change-password', loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule) },
       { path: '**', component: NotFoundComponent }
     ]
   }

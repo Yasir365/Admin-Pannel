@@ -1,0 +1,20 @@
+@import url('/src/assets/variables.scss');
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(97vh - 100px);
+
+    .content {
+        background-color: var(--sidebar-color);
+        color: var(--text-color);
+        border-radius: 12px;
+        padding: 2rem;
+
+        input {
+            margin-bottom: 8px;
+        }
+    }
+
+}
