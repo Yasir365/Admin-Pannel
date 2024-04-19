@@ -12,11 +12,11 @@ ul {
     padding: 0;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -131,6 +131,15 @@ body {
             color: var(--text-color) !important;
         }
 
+        .active i,
+        .active .nav-text {
+            color: var(--text-color) !important;
+        }
+
+        .sub-menu .active i,
+        .sub-menu .active .nav-text {
+            color: var(--text-color) !important;
+        }
 
         .toggle-switch {
             .switch {
