@@ -107,9 +107,8 @@
                 .active {
                     background-color: var(--primary-color);
 
-                    i,
-                    .nav-text {
-                        color: var(--sidebar-color) !important;
+                    a {
+                        color: var(--sidebar-color);
                     }
                 }
             }
