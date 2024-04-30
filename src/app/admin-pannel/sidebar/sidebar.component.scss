@@ -58,6 +58,9 @@
             &.parent-active {
                 background-color: var(--primary-color-light);
 
+                .icon{
+                    color: var(--active-text-color);
+                }
                 .sub-menu {
                     display: block !important;
                 }
@@ -113,14 +116,10 @@
                         opacity: 1;
                     }
 
-                    &.active2 {
-                        border: 1px solid var(--active-color);
-                        opacity: 1;
-
-                        a {
-                            color: var(--sidebar-color);
-                        }
+                    .nav-text{
+                        font-size: 15px;
                     }
+
                 }
 
                 &.link-name {
@@ -131,8 +130,8 @@
             }
 
             .active {
-                background-color: var(--primary-color);
-
+                background-color: var(--active-color);
+                opacity: 1 !important;
                 i,
                 .nav-text {
                     color: var(--sidebar-color);
