@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoaderOptionsObject } from '../shared/loader.interface';
 
-export interface LoaderOptionsObject {
-  rows: number,
-  cols: number,
-  colSpans: {
-    0: number
-  }
-}
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',
