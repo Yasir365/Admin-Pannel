@@ -17,6 +17,16 @@
     }
 }
 
+.download{
+    background: var( --primary-color-light);
+    color: var(--active-text-color);
+
+    &:hover{
+        background-color: var(--active-text-color);
+        color: var(--primary-color-light);
+    }
+}
+
 .table {
 
     thead,

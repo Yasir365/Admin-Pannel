@@ -60,4 +60,11 @@ export class AnalyticsComponent implements OnInit {
     }
   }
 
+  downloadCsv(){
+
+  }
+
+  downloadPdf(){
+  }
+
 }

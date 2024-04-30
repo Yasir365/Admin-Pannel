@@ -27,10 +27,16 @@
     </div>
 </div>
 
-<!-- Table Data -->
 <div class="row mt-4">
+    <div class="d-flex justify-content-end">
+        <button class="btn download" (click)="downloadPdf()">Download PDF</button>
+        <button class="btn download ms-2" (click)="downloadCsv()">Download CSV</button>
+    </div>
+</div>
+<!-- Table Data -->
+<div class="row mt-2">
     <div class="col-12">
-        <table class="table">
+        <table class="table" id="tableData">
             <thead>
               <tr>
                 <th scope="col">#</th>
