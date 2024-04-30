@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
-      { path: 'orders', loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule) },
+      { path: 'category', loadChildren: () => import('./category/category.module').then(m => m.CategoryModule) },
       { path: 'analytics', loadChildren: () => import('./analytics/analytics.module').then(m => m.AnalyticsModule) },
       { path: 'change-password', loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule) },
       { path: '**', component: NotFoundComponent }

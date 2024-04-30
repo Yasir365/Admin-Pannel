@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
       duration: 700,
       easing: 'ease-in-sine',
       delay: 100,
+      once: true
     });
   }
   title = 'AdminPannel';

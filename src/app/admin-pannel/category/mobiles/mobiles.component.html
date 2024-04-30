@@ -1,0 +1,11 @@
+<div class="Breadcrumb" data-aos="zoom-in">Category / Mobiles </div>
+
+<div class="row wrapper">
+  <div class="col-lg-3 col-sm-6 col-12 mb-4" *ngFor="let item of mobiles; let i=index" data-aos="fade-left"  [attr.data-aos-delay]="item.delay">
+    <div class="image-wrapper">
+      <img [src]="item.img" alt="">
+      <button class="d-block w-100"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+    </div>
+  </div>
+
+</div>
