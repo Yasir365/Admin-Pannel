@@ -45,7 +45,7 @@
                 <th scope="col">Returning Users</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody *ngIf="!dataFetching">
                 <tr *ngFor="let data of analyticsData; let i = index">
                     <td>{{ i }}</td>
                     <td>{{ data.date }}</td>
@@ -57,8 +57,9 @@
                     <td>{{ data.revenue }}</td>
                     <td>{{ data.newUsers }}</td>
                     <td>{{ data.returningUsers }}</td>
-                  </tr>
+                </tr>
             </tbody>
+            <tbody *ngIf="dataFetching" [tableLoader]="loaderOptions"></tbody>
           </table>
     </div>
 </div>

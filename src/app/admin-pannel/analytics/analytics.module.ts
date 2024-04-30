@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AnalyticsComponent } from './analytics.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AdminSharedModule } from '../shared/shared.module';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AdminSharedModule
   ],
   declarations: [AnalyticsComponent]
 })
