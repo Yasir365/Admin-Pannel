@@ -45,12 +45,21 @@
         li {
             position: relative;
             transition: var(--tran-04);
+            border-radius: 6px;
 
             &:hover {
                 background-color: var(--primary-color-light);
 
                 .sub-menu {
                     display: block;
+                }
+            }
+
+            &.parent-active {
+                background-color: var(--primary-color-light);
+
+                .sub-menu {
+                    display: block !important;
                 }
             }
 
@@ -79,23 +88,23 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                .arrow {
+                    min-width: 30px !important;
+                }
             }
 
             .sub-menu {
-                padding: 6px 6px 14px 80px;
+                padding: 6px 6px 14px 75px;
                 margin-top: -10px;
                 background-color: var(--primary-color-light);
                 display: none;
                 transition: var(--tran-04);
 
-                &.parent-active {
-                    display: block;
-                }
-
                 a {
                     color: var(--text-color);
                     font-size: 15px;
-                    padding: 5px 0 5px 10px;
+                    padding: 5px;
                     white-space: nowrap;
                     opacity: .7;
                     transition: var(--tran-03);
@@ -103,19 +112,21 @@
                     &:hover {
                         opacity: 1;
                     }
+
+                    &.active2 {
+                        border: 1px solid var(--active-color);
+                        opacity: 1;
+
+                        a {
+                            color: var(--sidebar-color);
+                        }
+                    }
                 }
 
                 &.link-name {
                     display: none;
                 }
 
-                .active {
-                    background-color: var(--primary-color);
-
-                    a {
-                        color: var(--sidebar-color);
-                    }
-                }
 
             }
 
