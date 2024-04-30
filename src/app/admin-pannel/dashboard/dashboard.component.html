@@ -37,27 +37,9 @@
 
 <!-- Graphs -->
 <div class="row mt-4">
-    <div class="col-12 chart-container" style="height: 415px;">
-        <div id="chart" *ngIf="chartOptions3">
-            <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart" [xaxis]="chartOptions3.xaxis"></apx-chart>
-        </div>
-    </div>
-</div>
-
-<div class="row mt-4">
-    <div class="col-md-6 chart-container" >
-        <div class="row">
-            <div class="row">
-                <div id="chart" *ngIf="chartOptions2">
-                    <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart" [xaxis]="chartOptions2.xaxis"></apx-chart>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-6 chart-container">
-        <div id="chart" *ngIf="chartOptions4">
-            <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"></apx-chart>
+    <div class="col-12 chart-container">
+        <div id="chart" *ngIf="chartOptions1" >
+            <apx-chart [series]="chartOptions1.series" [chart]="chartOptions1.chart" [xaxis]="chartOptions1.xaxis"></apx-chart>
         </div>
     </div>
 </div>
