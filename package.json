@@ -23,7 +23,6 @@
     "apexcharts": "^3.48.0",
     "bootstrap": "^5.3.1",
     "boxicons": "^2.1.4",
-    "igniteui-angular": "^16.1.26",
     "ng-apexcharts": "^1.9.0",
     "ngx-toastr": "^18.0.0",
     "rxjs": "~7.8.0",

@@ -1,10 +1,10 @@
 
-<div class="Breadcrumb"> Dashboard </div>
+<div class="Breadcrumb" data-aos="zoom-in"> Dashboard </div>
 
 <!-- Tiles Stats -->
 <div class="row mt-4">
-    <ng-container *ngFor="let item of card_items; let i = index">
-        <div class="col-md-2" 
+    <!-- <ng-container *ngFor="let item of card_items; let i = index">
+        <div class="col-md-2 col-sm-6 col-12 mb-2" 
             igxDrag
             igxDrop
             #dragRef
@@ -20,7 +20,17 @@
                     <h5>{{item.name}}</h5>
                 </div>
         </div>
+    </ng-container>  -->
+   
+    <ng-container *ngFor="let item of card_items; let i = index">
+        <div class="col-md-2 col-sm-6 col-12 mb-2" >
+            <div class="dashboard-tiles" [ngStyle]="{'background-color': item.bg_color}"  draggable="false" onmousedown="if (event.preventDefault) event.preventDefault()"  [attr.data-aos]="i%2==0?'flip-right': 'flip-left'" [attr.data-aos-delay]="i*150" >
+                <h2>{{item.value}}</h2>
+                <h5>{{item.name}}</h5>
+            </div>
+        </div>
     </ng-container> 
+
 
 </div>
 
@@ -49,14 +59,5 @@
         <div id="chart" *ngIf="chartOptions4">
             <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart" [xaxis]="chartOptions4.xaxis"></apx-chart>
         </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12 chart-container">
-        <div id="chart" *ngIf="chartOptions1" >
-            <apx-chart [series]="chartOptions1.series" [chart]="chartOptions1.chart" [xaxis]="chartOptions1.xaxis"></apx-chart>
-        </div>
-        
     </div>
 </div>

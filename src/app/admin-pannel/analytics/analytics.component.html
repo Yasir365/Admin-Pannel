@@ -1,28 +1,28 @@
-<div class="Breadcrumb"> Analytics </div>
+<div class="Breadcrumb" data-aos="zoom-in"> Analytics </div>
 
 <!-- Filters -->
 <div class="row mt-4 filters">
-    <div class="col">
+    <div class="col" data-aos="flip-right">
         <label>Min Visitors:</label>
         <input type="number" class="form-control" [(ngModel)]="filter.minVisitors" (input)="changeFilter()" placeholder="Enter Min Visitors">
         
     </div>
-    <div class="col">
+    <div class="col" data-aos="flip-right">
         <label>Max Visitors:</label>
         <input type="number" class="form-control" [(ngModel)]="filter.maxVisitors" (input)="changeFilter()" placeholder="Enter Max Visitors">
     </div>
     
-    <div class="col">
+    <div class="col" data-aos="flip-right">
         <label>Min Conversion Rate:</label>
         <input type="number" class="form-control" [(ngModel)]="filter.minConversionRate" (input)="changeFilter()" placeholder="Enter Min Conversion">
     </div>
     
-    <div class="col">
+    <div class="col" data-aos="flip-right">
         <label>Max Conversion Rate:</label>
         <input type="number" class="form-control" [(ngModel)]="filter.maxConversionRate" (input)="changeFilter()" placeholder="Enter Min Conversion">
     </div>
     
-    <div class="col">
+    <div class="col" data-aos="flip-right">
         <button class="btn form-control mt-4" [disabled]="btnDisable">search</button>
     </div>
 </div>

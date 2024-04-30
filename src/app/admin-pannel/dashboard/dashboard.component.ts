@@ -48,47 +48,6 @@ export class DashboardComponent implements OnInit {
     this.adminPannelService.getDarkModeData().subscribe((data: any) => {
       if (data) {
 
-        this.chartOptions1 = {
-          series: [
-            {
-              name: "Total users",
-              data: [4, 5, 3, 4, 5, 6, 5, 3, 5, 4, 4, 2]
-            },
-            {
-              name: "Acive users",
-              data: [2, 3, 2, 3, 2, 6, 3, 2, 3, 2, 3, 1]
-            },
-            {
-              name: "Blocked users",
-              data: [2, 2, 1, 1, 3, 0, 2, 1, 2, 2, 1, 1]
-            }
-          ],
-          chart: {
-            height: 410,
-            type: "line",
-            zoom: {
-              enabled: false
-            },
-            background: '#3A3B3C',
-            borderRadius: 50
-
-          },
-          dataLabels: {
-            enabled: false
-          },
-          stroke: {
-            curve: "straight"
-          },
-          title: {
-            text: "Product Trends by Month",
-            align: "left"
-          },
-          xaxis: {
-            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-          }
-        };
-
-
         this.chartOptions2 = {
           series: [105, 67, 38],
           chart: {
@@ -97,26 +56,6 @@ export class DashboardComponent implements OnInit {
             background: '#3A3B3C',
             showlabel: true
           },
-          // plotOptions: {
-          //   radialBar: {
-          // dataLabels: {
-          //   name: {
-          //     fontSize: "50px",
-          //     color: "#000"
-          //   },
-          //   value: {
-          //     fontSize: "16px"
-          //   },
-          //   total: {
-          //     show: true,
-          //     label: "Total",
-          //     formatter: function(w:any) {
-          //       return "249";
-          //     }
-          //   }
-          // }
-          // }
-          // },
           labels: ["Total Orders", "Completed Users", "Pending Orders"],
         };
 
@@ -290,47 +229,6 @@ export class DashboardComponent implements OnInit {
 
 
       } else {
-        this.chartOptions1 = {
-          series: [
-            {
-              name: "Total users",
-              data: [4, 5, 3, 4, 5, 6, 5, 3, 5, 4, 4, 2]
-            },
-            {
-              name: "Acive users",
-              data: [2, 3, 2, 3, 2, 6, 3, 2, 3, 2, 3, 1]
-            },
-            {
-              name: "Blocked users",
-              data: [2, 2, 1, 1, 3, 0, 2, 1, 2, 2, 1, 1]
-            }
-          ],
-          chart: {
-            height: 410,
-            type: "line",
-            zoom: {
-              enabled: false
-            },
-            background: '#fff',
-            borderRadius: 50
-
-          },
-          dataLabels: {
-            enabled: false
-          },
-          stroke: {
-            curve: "straight"
-          },
-          title: {
-            text: "Product Trends by Month",
-            align: "left"
-          },
-          xaxis: {
-            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-          }
-        };
-
-
         this.chartOptions2 = {
           series: [105, 67, 38],
           chart: {
@@ -339,26 +237,6 @@ export class DashboardComponent implements OnInit {
             background: '#fff',
             showlabel: true
           },
-          // plotOptions: {
-          //   radialBar: {
-          // dataLabels: {
-          //   name: {
-          //     fontSize: "50px",
-          //     color: "#000"
-          //   },
-          //   value: {
-          //     fontSize: "16px"
-          //   },
-          //   total: {
-          //     show: true,
-          //     label: "Total",
-          //     formatter: function(w:any) {
-          //       return "249";
-          //     }
-          //   }
-          // }
-          // }
-          // },
           labels: ["Total Orders", "Completed Users", "Pending Orders"],
         };
 
