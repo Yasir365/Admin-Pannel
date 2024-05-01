@@ -22,3 +22,8 @@ npm i ngx-toastr
 
 <!-- Drag Drop -->
 ng add igniteui-angular
+
+
+<!-- PDF Download -->
+npm i --save-dev @types/pdfmake --legacy-peer-deps
+npm install html2canvas jspdf --save --legacy-peer-deps
