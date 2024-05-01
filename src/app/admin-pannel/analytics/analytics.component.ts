@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoaderOptionsObject } from '../shared/loader.interface';
-
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',
@@ -9,9 +10,8 @@ import { LoaderOptionsObject } from '../shared/loader.interface';
 export class AnalyticsComponent implements OnInit {
   analyticsData: any[] = [];
   filter!: any
-  btnDisable: boolean = true
   loaderOptions: LoaderOptionsObject = {
-    rows: 5,
+    rows: 7,
     cols: 10,
     colSpans: {
       0: 1
@@ -42,29 +42,26 @@ export class AnalyticsComponent implements OnInit {
         { id: 7, date: '2022-01-07', visitors: 1250, pageViews: 5400, bounceRate: 36, sessionDuration: '00:07:00', conversionRate: 8, revenue: 13000, newUsers: 1050, returningUsers: 200 },
         { id: 8, date: '2022-01-08', visitors: 1150, pageViews: 5100, bounceRate: 39, sessionDuration: '00:05:40', conversionRate: 5.5, revenue: 9900, newUsers: 800, returningUsers: 350 },
         { id: 9, date: '2022-01-09', visitors: 1220, pageViews: 5700, bounceRate: 34, sessionDuration: '00:06:10', conversionRate: 6.2, revenue: 10700, newUsers: 950, returningUsers: 270 },
-        { id: 10, date: '2022-01-10', visitors: 1350, pageViews: 6200, bounceRate: 31, sessionDuration: '00:06:40', conversionRate: 7.2, revenue: 11800, newUsers: 1050, returningUsers: 300 },
-        { id: 11, date: '2022-01-11', visitors: 1120, pageViews: 4900, bounceRate: 41, sessionDuration: '00:05:20', conversionRate: 4.8, revenue: 9300, newUsers: 750, returningUsers: 370 },
-        { id: 12, date: '2022-01-12', visitors: 1180, pageViews: 5300, bounceRate: 37, sessionDuration: '00:05:50', conversionRate: 5.8, revenue: 10100, newUsers: 850, returningUsers: 330 },
-        { id: 13, date: '2022-01-13', visitors: 1280, pageViews: 5800, bounceRate: 32, sessionDuration: '00:06:20', conversionRate: 6.8, revenue: 11300, newUsers: 950, returningUsers: 330 },
-        { id: 14, date: '2022-01-14', visitors: 1320, pageViews: 6100, bounceRate: 29, sessionDuration: '00:06:50', conversionRate: 7.3, revenue: 11900, newUsers: 1000, returningUsers: 320 },
-        { id: 15, date: '2022-01-15', visitors: 1250, pageViews: 5600, bounceRate: 35, sessionDuration: '00:07:10', conversionRate: 7.7, revenue: 12600, newUsers: 1050, returningUsers: 200 }
+        { id: 10, date: '2022-01-15', visitors: 1250, pageViews: 5600, bounceRate: 35, sessionDuration: '00:07:10', conversionRate: 7.7, revenue: 12600, newUsers: 1050, returningUsers: 200 }
       ];
     }, 3000);
   }
 
-  changeFilter() {
-    if (this.filter.minVisitors != null && this.filter.maxVisitors != null && this.filter.minConversionRate != null && this.filter.maxConversionRate != null) {
-      this.btnDisable = false;
-    } else {
-      this.btnDisable = true;
-    }
-  }
-
-  downloadCsv(){
+  downloadCsv() {
 
   }
 
-  downloadPdf(){
+  downloadPdf() {
+    let a: any = document.getElementById('tableData');
+    html2canvas(a).then((canvas: any) => {
+      const contentDataUrl = canvas.toDataURL('image/png');
+      let pdf = new jsPDF('p', 'mm', 'a4');
+      let width = pdf.internal.pageSize.getWidth();
+      let height = canvas.height * width / canvas.width;
+      pdf.addImage(contentDataUrl, 'PNG', 0, 0, width, height);
+      pdf.save('analytics.pdf');
+    })
+
   }
 
 }

@@ -4,26 +4,26 @@
 <div class="row filters">
     <div class="col" data-aos="flip-right">
         <label>Min Visitors:</label>
-        <input type="number" class="form-control" [(ngModel)]="filter.minVisitors" (input)="changeFilter()" placeholder="Enter Min Visitors">
+        <input type="number" class="form-control" [(ngModel)]="filter.minVisitors" placeholder="Enter Min Visitors">
         
     </div>
     <div class="col" data-aos="flip-right">
         <label>Max Visitors:</label>
-        <input type="number" class="form-control" [(ngModel)]="filter.maxVisitors" (input)="changeFilter()" placeholder="Enter Max Visitors">
+        <input type="number" class="form-control" [(ngModel)]="filter.maxVisitors" placeholder="Enter Max Visitors">
     </div>
     
     <div class="col" data-aos="flip-right">
         <label>Min Conversion Rate:</label>
-        <input type="number" class="form-control" [(ngModel)]="filter.minConversionRate" (input)="changeFilter()" placeholder="Enter Min Conversion">
+        <input type="number" class="form-control" [(ngModel)]="filter.minConversionRate" placeholder="Enter Min Conversion">
     </div>
     
     <div class="col" data-aos="flip-right">
         <label>Max Conversion Rate:</label>
-        <input type="number" class="form-control" [(ngModel)]="filter.maxConversionRate" (input)="changeFilter()" placeholder="Enter Min Conversion">
+        <input type="number" class="form-control" [(ngModel)]="filter.maxConversionRate" placeholder="Enter Min Conversion">
     </div>
     
     <div class="col" data-aos="flip-right">
-        <button class="btn form-control mt-4" [disabled]="btnDisable">search</button>
+        <button class="btn form-control mt-4">search</button>
     </div>
 </div>
 
@@ -39,30 +39,30 @@
         <table class="table" id="tableData">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Date</th>
-                <th scope="col">Visitors</th>
-                <th scope="col">Page Views</th>
-                <th scope="col">Bounce Rate</th>
-                <th scope="col">Session Duration</th>
-                <th scope="col">Conversion Rate</th>
-                <th scope="col">Revenue</th>
-                <th scope="col">New Users</th>
-                <th scope="col">Returning Users</th>
+                <th >#</th>
+                <th class="text-center">Date</th>
+                <th class="text-center">Visitors</th>
+                <th class="text-center">Page Views</th>
+                <th class="text-center">Bounce Rate</th>
+                <th class="text-center">Session Duration</th>
+                <th class="text-center">Conversion Rate</th>
+                <th class="text-center">Revenue</th>
+                <th class="text-center">New Users</th>
+                <th class="text-center">Returning Users</th>
               </tr>
             </thead>
             <tbody *ngIf="!dataFetching">
                 <tr *ngFor="let data of analyticsData; let i = index">
-                    <td>{{ i }}</td>
-                    <td>{{ data.date }}</td>
-                    <td>{{ data.visitors }}</td>
-                    <td>{{ data.pageViews }}</td>
-                    <td>{{ data.bounceRate }}%</td>
-                    <td>{{ data.sessionDuration }}</td>
-                    <td>{{ data.conversionRate }}%</td>
-                    <td>{{ data.revenue }}</td>
-                    <td>{{ data.newUsers }}</td>
-                    <td>{{ data.returningUsers }}</td>
+                    <td>{{ i+1 }}</td>
+                    <td class="text-center">{{ data.date }}</td>
+                    <td class="text-center">{{ data.visitors }}</td>
+                    <td class="text-center">{{ data.pageViews }}</td>
+                    <td class="text-center">{{ data.bounceRate }}%</td>
+                    <td class="text-center">{{ data.sessionDuration }}</td>
+                    <td class="text-center" [ngClass]="{ 'text-danger': data.conversionRate >50 , 'text-success': data.conversionRate <= 50 }">{{ data.conversionRate }}%</td>
+                    <td class="text-center">{{ data.revenue }}</td>
+                    <td class="text-center">{{ data.newUsers }}</td>
+                    <td class="text-center text-success">{{ data.returningUsers }}</td>
                 </tr>
             </tbody>
             <tbody *ngIf="dataFetching" [tableLoader]="loaderOptions"></tbody>
