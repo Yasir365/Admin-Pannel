@@ -39,7 +39,7 @@
         <table class="table" id="tableData">
             <thead>
               <tr>
-                <th >#</th>
+                <th> <input type="checkbox" [(ngModel)]="selectAll" (change)="toggleSelectAll()"> </th>                <th >#</th>
                 <th class="text-center">Date</th>
                 <th class="text-center">Visitors</th>
                 <th class="text-center">Page Views</th>
@@ -53,6 +53,7 @@
             </thead>
             <tbody *ngIf="!dataFetching">
                 <tr *ngFor="let data of analyticsData; let i = index">
+                    <td> <input type="checkbox" [(ngModel)]="data.selected" (change)="toggleSelection(i)" /> </td>
                     <td>{{ i+1 }}</td>
                     <td class="text-center">{{ data.date }}</td>
                     <td class="text-center">{{ data.visitors }}</td>
